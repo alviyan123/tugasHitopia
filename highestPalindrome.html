@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Palindrome Dengan Javascript</title>
+    <body>
+        <div>
+            <h2 id="strings"></h2>
+            <h2 id="query"></h2><hr>
+            <h2 id="result"></h2>
+        </div>
+    </body>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+function highestPalindrome(string, k) {
+  if (string === '') {
+    return '';
+  }
+
+  if (string.length === 1) {
+    if (k > 0) {
+      return '9';
+    } else {
+      return string;
+    }
+  }
+
+  if (string.length === 2) {
+    if (string[0] !== string[1]) {
+      if (k > 0) {
+        return '99';
+      } else {
+        return Math.max(string[0], string[1]);
+      }
+    } else {
+      return string;
+    }
+  }
+
+  if (string[0] === string[string.length - 1]) {
+    return string[0] + highestPalindrome(string.slice(1, string.length - 1), k);
+  } else {
+    if (k > 0) {
+      const first = highestPalindrome(string.slice(0, string.length - 1), k - 1);
+      const last = highestPalindrome(string.slice(1), k - 1);
+      if (first === '-1' && last === '-1') {
+        return '-1';
+      } else if (first === '-1') {
+        return string[string.length - 1] + last;
+      } else if (last === '-1') {
+        return first + string[0];
+      } else {
+        if (first > last) {
+          return string[string.length - 1] + first;
+        } else {
+          return string[0] + last;
+        }
+      }
+    } else {
+      return '-1';
+    }
+  }
+}
+
+    const string = '3943';
+    const k = 1;
+
+    document.getElementById("strings").innerHTML = "string : "+string;
+    document.getElementById("query").innerHTML = "K : "+k;
+    document.getElementById("result").innerHTML = highestPalindrome(string, k);
+
+    console.log(highestPalindrome(string, k));
+</script>
