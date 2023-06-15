@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Highest Palindrome Dengan Javascript</title>
-    <body>
-        <div>
-            <h2 id="strings"></h2>
-            <h2 id="query"></h2><hr>
-            <h2 id="result"></h2>
-        </div>
-    </body>
-</head>
-<body>
-    
-</body>
-</html>
 
-<script>
 function highestPalindrome(string, k) {
   if (string === '') {
     return '';
@@ -72,9 +52,4 @@ function highestPalindrome(string, k) {
     const string = '3943';
     const k = 1;
 
-    document.getElementById("strings").innerHTML = "string : "+string;
-    document.getElementById("query").innerHTML = "K : "+k;
-    document.getElementById("result").innerHTML = highestPalindrome(string, k);
-
     console.log(highestPalindrome(string, k));
-</script>
