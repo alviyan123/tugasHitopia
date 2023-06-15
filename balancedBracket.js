@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Highest Palindrome Dengan Javascript</title>
-    <body>
-        <div>
-            <h2 id="a1"></h2>
-            <h2 id="a2"></h2>
-            <h2 id="a3"></h2>
-        </div>
-    </body>
-</head>
-<body>
-    
-</body>
-</html>
-
-<script>
 
     function isBalancedBracket(str) {
     const stack = [];
@@ -55,7 +34,6 @@
     }
 
     // Contoh penggunaan:
-    document.getElementById("a1").innerHTML = isBalancedBracket("{[()]}");// Output: YES
-    document.getElementById("a2").innerHTML = isBalancedBracket("{[(])}");// Output: NO
-    document.getElementById("a3").innerHTML = isBalancedBracket("{(([])[])[]}") // Output: YES
-</script>
+    console.log(isBalancedBracket("{[()]}"));
+    console.log(isBalancedBracket("{[(])}"));
+    console.log(isBalancedBracket("{(([])[])[]}"));
