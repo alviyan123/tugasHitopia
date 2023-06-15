@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weighted Strings Dengan Javascript</title>
-    <body>
-        <div>
-            <h2 id="strings"></h2>
-            <h2 id="query"></h2><hr>
-            <h2 id="result"></h2>
-        </div>
-    </body>
-</head>
-<body>
-    
-</body>
-</html>
 
-<script>
 function weightedStrings(string, queries) {
   const weights = {};  // menyimpan bobot substring/karakter
 
@@ -49,10 +29,5 @@ function weightedStrings(string, queries) {
 //inputkan disini
 const string = 'abbcccd';
 const queries = [1, 3, 9, 8];
-
-document.getElementById("strings").innerHTML = "string : ["+string+"]";
-document.getElementById("query").innerHTML = "query : ["+queries+"]";
-document.getElementById("result").innerHTML = weightedStrings(string, queries);
 //jalankan fungsi
 console.log(weightedStrings(string, queries));
-</script>
